@@ -1,0 +1,104 @@
+:root {
+  --accent-color: #ce6898;
+  --primary-color: #F9F5F4;
+  --secondary-color: #f2e8e8;
+  --link-color: #617d98;
+  --light-link-color:#8196AA;
+  --text-color:#4A4A5B;
+  --light-text-color:#ffedeb;
+  --footer-color: #dfd7d5;
+  --pixel-font: "Pixelify Sans", sans-serif;
+  --title-font: "Archivo Narrow", sans-serif;
+}
+
+html, body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    scroll-behavior: smooth;
+    scroll-padding-top: 65.6px;
+  }
+  
+  body {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+  }
+  
+  #root {
+    flex: 1 0 auto;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+  }
+  
+  .layout-container {
+    flex: 1 0 auto;
+    display: flex;
+    flex-direction: column;
+    padding: 0 !important;
+  }
+  
+  .navbar {
+    margin-top: 0 !important;
+    width: 100%;
+  }
+
+  .text-start img {
+    max-width: 20%;
+    height: auto;
+    position: absolute;
+    right: 22%;
+    border-radius: 10px;
+  }
+
+body {
+    background-color: var(--primary-color);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #333;
+}
+
+
+/* Links */
+
+  /* unvisited link */
+  .nav-link a:link {
+    color: var(--link-color)
+  }
+  /* visited link */
+  .nav-link a:visited {
+    color: var(--link-color)
+  }
+  
+  /* mouse over link */
+  .nav-link a:hover {
+    color: var(--accent-color)
+  }
+  
+  /* selected link */
+  .nav-link a:active {
+    color: var(--accent-color)
+  } 
+
+/* Titles */
+
+h1 {
+
+  font-family: var(--pixel-font);
+  font-size: 55px;
+  text-align: center;
+  color: var(--accent-color);
+}
+
+h2 {
+  margin-bottom: 35px;
+  margin-left: 35px;
+  font-family: "Archivo Narrow", sans-serif;
+  font-size: 45px;
+
+}
+
+
+
+
+
