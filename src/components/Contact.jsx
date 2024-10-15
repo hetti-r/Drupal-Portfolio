@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { fetchContent } from '../services/api';
+import { Button, Card, Col, Container, Form, ListGroup, Row, Spinner } from "react-bootstrap";
 
 const Contact = () => {
     const [content, setContent] = useState(null);
@@ -29,32 +30,40 @@ const Contact = () => {
     }
 
     return (
-        <div>
-            {content && content.attributes && content.attributes.body ? (
-                <>
-                    <h1>{content.attributes.title}</h1>
-                    <div dangerouslySetInnerHTML={{ __html: content.attributes.body.value }} />
-                </>
-            ) : (
-                <div>No content available</div>
-            )}
-            <form onSubmit={(e) => e.preventDefault()}>
-                <div>
-                    <label htmlFor="name">Name:</label>
-                    <input type="text" id="name" name="name" required />
-                </div>
-                <div>
-                    <label htmlFor="email">Email:</label>
-                    <input type="email" id="email" name="email" required />
-                </div>
-                <div>
-                    <label htmlFor="message">Message:</label>
-                    <textarea id="message" name="message" required></textarea>
-                </div>
-                <button type="submit">Send</button>
-            </form>
+        <Container fluid>
+            <Row className="justify-content-center">
+                <Col xs={12} md={8} lg={3} className="mt-5 text-center">
+                    {content && content.attributes && content.attributes.body ? (
+                        <>
+                            <h1>{content.attributes.title}</h1>
+                            <div dangerouslySetInnerHTML={{ __html: content.attributes.body.value }} />
+                        </>
+                    ) : (
+                        <div>No content available</div>
+                    )}
+                    <Form onSubmit={(e) => e.preventDefault()}>
+                        <Form.Group className="mb-3" controlId="formName">
+                            <Form.Label>Name</Form.Label>
+                            <Form.Control type="text" required />
+                        </Form.Group>
 
-        </div>
+                        <Form.Group className="mb-3" controlId="formEmail">
+                            <Form.Label>Email address</Form.Label>
+                            <Form.Control type="email" required />
+                        </Form.Group>
+
+                        <Form.Group className="mb-3" controlId="formMessage">
+                            <Form.Label>Message</Form.Label>
+                            <Form.Control as="textarea" rows={3} required />
+                        </Form.Group>
+
+                        <Button variant="primary" type="submit">
+                            Send
+                        </Button>
+                    </Form>
+                </Col>
+            </Row>
+        </Container>
     );
 };
 

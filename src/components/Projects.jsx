@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { fetchContent } from '../services/api';
+import { Button, Card, Col, Container, Form, ListGroup, Row, Spinner } from "react-bootstrap";
 
 const Projects = () => {
     const [content, setContent] = useState(null);
@@ -29,16 +30,21 @@ const Projects = () => {
     }
 
     return (
-        <div>
-            <h1>{content.attributes.title}</h1>
-            {content && content.attributes && content.attributes.body ? (
-                <div
-                    dangerouslySetInnerHTML={{ __html: content.attributes.body.value }}
-                />
-            ) : (
-                <div>No content available</div>
-            )}
-        </div>
+        <Container fluid>
+            <Row className="justify-content-center">
+                <Col xs={12} md={8} lg={6} className="mt-5 text-center">
+                    <h1>{content.attributes.title}</h1>
+                    {content && content.attributes && content.attributes.body ? (
+                        <div
+                            className="drupal-body-projects"
+                            dangerouslySetInnerHTML={{ __html: content.attributes.body.value }}
+                        />
+                    ) : (
+                        <div>No content available</div>
+                    )}
+                </Col>
+            </Row>
+        </Container>
     );
 };
 

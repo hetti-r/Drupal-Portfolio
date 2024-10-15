@@ -9,9 +9,9 @@ const Layout = () => {
     return (
         <Container fluid className="px-0" layout-container>
             <Row className="mx-0">
-                <Navbar variant="light" className="px-3">
+                <Navbar className="px-3 gradient-background">
                     <Container className="justify-content-end">
-                        <Nav fill variant="tabs" defaultActiveKey="/home">
+                        <Nav className="me-auto">
                             <LinkContainer to="/">
                                 <Nav.Link>Home</Nav.Link>
                             </LinkContainer>

@@ -2,7 +2,7 @@
   --accent-color: #ce6898;
   --primary-color: #F9F5F4;
   --secondary-color: #f2e8e8;
-  --link-color: #617d98;
+  --link-color: #283c4e;
   --light-link-color:#8196AA;
   --text-color:#4A4A5B;
   --light-text-color:#ffedeb;
@@ -23,6 +23,7 @@ html, body {
     display: flex;
     flex-direction: column;
     width: 100%;
+    height: fit-content;
   }
   
   #root {
@@ -54,31 +55,44 @@ html, body {
 
 body {
     background-color: var(--primary-color);
+    background-image: url(https://github.com/hetti-r/Drupal-Portfolio/blob/main/src/assets/3tausta.png?raw=true);
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     color: #333;
 }
 
+.gradient-background {
+  background: rgb(206,104,152);
+  background: linear-gradient(90deg, rgb(225, 152, 186) 0%, rgb(221, 183, 230) 100%);  
+}
+
+.gradient-background .nav-link {
+  color: white !important;
+}
+
+.gradient-background .nav-link:hover {
+  color: #f0f0f0 !important;
+}
 
 /* Links */
 
-  /* unvisited link */
-  .nav-link a:link {
-    color: var(--link-color)
-  }
-  /* visited link */
-  .nav-link a:visited {
-    color: var(--link-color)
-  }
-  
-  /* mouse over link */
-  .nav-link a:hover {
-    color: var(--accent-color)
-  }
-  
-  /* selected link */
-  .nav-link a:active {
-    color: var(--accent-color)
-  } 
+/* Target all navbar links */
+.navbar .nav-link {
+  color: var(--link-color) !important;
+  font-size: 1.25rem;
+  font-family: var(--title-font);
+}
+
+/* Target hover and focus states */
+.navbar .nav-link:hover,
+.navbar .nav-link:focus {
+  color: var(--accent-color) !important;
+}
+
+/* Target active state */
+.navbar .nav-item.active .nav-link,
+.navbar .nav-link.active {
+  color: var(--light-text-color) !important;
+}
 
 /* Titles */
 
@@ -90,12 +104,17 @@ h1 {
   color: var(--accent-color);
 }
 
-h2 {
-  margin-bottom: 35px;
-  margin-left: 35px;
-  font-family: "Archivo Narrow", sans-serif;
-  font-size: 45px;
+h2, h4 {
 
+  font-family: "Archivo Narrow", sans-serif;
+  font-size: 35px;
+
+}
+
+.drupal-body-projects img {
+width: 22rem;
+height: auto;
+border-radius: 10px;
 }
 
 
