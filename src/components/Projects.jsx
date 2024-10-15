@@ -31,7 +31,7 @@ const Projects = () => {
 
     return (
         <Container fluid>
-            <Row className="justify-content-center">
+            <Row className="justify-content-center projects-body">
                 <Col xs={12} md={8} lg={6} className="mt-5 text-center">
                     <h1>{content.attributes.title}</h1>
                     {content && content.attributes && content.attributes.body ? (

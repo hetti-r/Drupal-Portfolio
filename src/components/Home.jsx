@@ -31,8 +31,8 @@ const Home = () => {
   }
 
   return (
-    <Container fluid>
-      <Row className="justify-content-center">
+    <Container fluid className="px-0 m-0">
+      <Row className="justify-content-center px-0 m-0">
         <Col xs={12} md={8} lg={6} className="mt-5 text-center">
 
           {content && content.attributes && content.attributes.body ? (
