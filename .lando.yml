@@ -1,0 +1,4 @@
+name: drupal-portfolio
+recipe: drupal11
+config:
+  webroot: web
