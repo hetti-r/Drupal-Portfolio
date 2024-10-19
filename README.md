@@ -14,7 +14,6 @@ This is a progressively decoupled full-stack web application that uses Drupal fo
 
 ```bash
 git clone https://github.com/hetti-r/Drupal-Portfolio.git
-cd drupal-portfolio
 ```
 
 - Inside the project directory start lando
@@ -23,7 +22,7 @@ cd drupal-portfolio
 lando start
 ```
 
-- Navigate to the React frontend directory (/web/themes/custom/my-drupalreact-portfolio):
+- Navigate to the React frontend directory
 
 ```bash
 cd web/themes/custom/my-drupalreact-portfolio
@@ -31,7 +30,7 @@ npm install
 npm run dev
 ```
 
-- Import drupal configurations and database
+- Import drupal configurations and database and clear cache
 
 ```bash
 lando drush cim
