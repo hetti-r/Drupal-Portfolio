@@ -1,0 +1,12 @@
+uuid: 633cc198-cc0c-4e94-9fb0-9f5e904151d8
+langcode: en
+status: true
+dependencies: {  }
+id: contact_me
+label: 'Contact Me'
+recipients:
+  - s2400069@edu.bc.fi
+reply: ''
+weight: 0
+message: 'Thank you for your message!'
+redirect: ''
