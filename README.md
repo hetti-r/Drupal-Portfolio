@@ -8,8 +8,8 @@ This is a progressively decoupled full-stack web application that uses Drupal fo
 
 ## Setup
 
-- [Docker](https://www.docker.com/)
-- [Lando](https://docs.lando.dev/)
+- Install [Docker](https://www.docker.com/)
+- Install [Lando](https://docs.lando.dev/)
 - Clone the Repository
 
 ```bash
